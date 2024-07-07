@@ -1,0 +1,18 @@
+table{
+    width:85%;
+    margin-left:20px;
+    margin-right:20px;
+}
+.btn11
+{
+    margin-left:20px;
+    padding:10px;
+    border:3px groove orangered;
+}
+.btn11:hover{
+    transition-duration: 1s;
+    border:3px groove greenyellow;
+    transform: scaleX(0.9) scaleY(0.9);
+    box-shadow: 4px 4px 15px gray ;
+    cursor: pointer;
+}

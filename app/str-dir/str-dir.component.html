@@ -1,0 +1,123 @@
+<p>str-dir works!</p>
+
+<div>
+    <label>Student Name</label>
+<input type="text" [(ngModel)]="newStd">
+</div>
+<button type="button" (click)="onAddStu()"
+class="btn btn-success">Add New Student</button>
+
+<h2 *ngFor="let st of students">
+{{st
+}}
+</h2>
+
+<table class="table table-dark table-hover">
+         
+          <tr>
+              <th scope="col">Student Name</th>
+          </tr>
+       
+        <tr *ngFor="let st of students">
+            <td>{{st}}</td>
+        </tr>
+                
+</table>
+
+<h3> Student entry</h3>
+
+<label> Name </label>
+<input type="text" [(ngModel)]="stname">
+<label> maths </label>
+<input type="text" [(ngModel)]="mt">
+<label> science </label>
+<input type="text" [(ngModel)]="sci">
+<label> english </label>
+<input type="text" [(ngModel)]="eng">
+
+<button (click)="onAddStudent()"> Add Student </button>
+
+<div class="row">
+    <div class="col pass">
+        <table class="table">
+            <thead>
+              <tr>                
+                <th scope="col">name</th>
+                <th scope="col">maths</th>
+                <th scope="col">sci</th>
+                <th scope="col">Eng</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let st of pass_st">
+                <td>{{st.name}}</td>
+                <td>{{st.maths}}</td>
+                <td>{{st.science}}</td>
+                <td>{{st.english}}</td>
+                <td>Pass</td>
+              </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class=" col fail"> 
+
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">name</th>
+                <th scope="col">maths</th>
+                <th scope="col">sci</th>
+                <th scope="col">Eng</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let st of fail_st">
+                <td>{{st.name}}</td>
+                <td>{{st.maths}}</td>
+                <td>{{st.science}}</td>
+                <td>{{st.english}}</td>
+                <td>Fail</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br><br><br><br><br><br>
+
+<!-- <h3 *ngFor="let anything of ar">
+    {{anything+'     datahere'}}
+</h3>
+
+<h3>{{ar}}</h3>
+
+<h3 *ngFor="let ob of ar2">
+    {{ob.prid}} {{ob.prname}} {{ob.prcat}}
+</h3> -->
+
+
+
+
+<h2 *ngIf="ngIf_cond"> This block is visible</h2>
+<label for="">Enter marks</label>
+<!-- <input type="number" [(ngModel)]="ngIf_marks">
+<h2 *ngIf="ngIf_marks>=40"> Congratulations!!!!</h2>
+<h2 *ngIf="!(ngIf_marks > 40)"> Better luck next time!!!</h2> -->
+<input type="text" [(ngModel)]="data12">
+
+<h2 *ngIf="data12[0]== 'A' else FalseBlock "> An {{ data12}}!!!!</h2>
+<!-- <h2 *ngIf=" data12[0]!= 'A' "> A {{ data12}}!!!!</h2> -->
+<ng-template #FalseBlock>
+  <h2 > A {{ data12}}!!!!</h2>
+</ng-template>
+<div [ngSwitch]="data12[0]">
+  <h4 *ngSwitchCase="'A'"> An {{ data12}}!!!!</h4>
+  <h4 *ngSwitchCase="'O'"> An {{ data12}}!!!!</h4>
+  <h4 *ngSwitchCase="'E'"> An {{ data12}}!!!!</h4>
+  <h4 *ngSwitchCase="'I'"> An {{ data12}}!!!!</h4>
+  <h4 *ngSwitchCase="'U'"> An {{ data12}}!!!!</h4>
+
+</div>

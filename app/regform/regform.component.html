@@ -1,0 +1,32 @@
+<h1>Registration Form</h1>
+<br><br><br>
+<form  [formGroup]="regForm" (ngSubmit)="onReg()">
+<div [ngClass]="{'err': (err['stname'].invalid && err['stname'].touched), 
+'noerr': !(err['stname'].invalid && err['stname'].touched)}" >
+    <label> Student Full Name</label>
+    <input type="text" formControlName="stname">
+</div><br><br>
+
+<div [ngClass]="{'err': (err['stemail'].invalid && err['stemail'].touched), 'noerr': !(err['stemail'].invalid && err['stemail'].touched)}">
+    <label> Student EmailID</label>
+    <input type="email" formControlName="stemail">
+</div>
+<p class='Error' *ngIf="err['stemail'].invalid && err['stemail'].touched "> 
+    Please enter correct email address</p>
+<br><br>
+
+<div [ngClass]="{'err': (err['stadd'].invalid && err['stadd'].touched), 'noerr': !(err['stadd'].invalid && err['stadd'].touched)}">
+    <label> Address</label>
+    <input type="text" formControlName="stadd">
+</div><br><br>
+
+<div [ngClass]="{'err': (err['ph'].invalid && err['ph'].touched), 'noerr': !(err['ph'].invalid && err['ph'].touched)}">
+    <label> Contact Number</label>
+    <input type="tel" formControlName="ph">
+</div>
+<p class='Error' *ngIf="err['ph'].invalid && err['ph'].touched "> 
+    Please enter 10 digit contact number
+</p>
+<button [disabled]="regForm.status == 'INVALID' " type="submit"> Register Now</button>
+
+</form>

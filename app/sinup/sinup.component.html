@@ -1,0 +1,71 @@
+<p>sinup works!</p>
+<h3>Taking user input and display in console</h3>
+<div>
+    <label for=""> 
+        Enter your name
+     </label>
+    <input type="text"
+     name="uname" #uname>
+</div>
+
+<button (click)="onSinup(uname)"> 
+    SinUP
+</button>
+
+<h3> Task to take 2 num and disp addn on HTML</h3>
+
+<div>
+    <label for=""> 
+        Enter First Number
+     </label>
+    <input type="text"
+     name="uname" #nm1>
+</div>
+<div>
+    <label for=""> 
+        Enter Second Number
+     </label>
+    <input type="text"
+     name="uname" #nm2>
+</div>
+
+<button (click)="onNumAdd(nm1,nm2)"> 
+    ADDITION
+</button>
+<H4>RESULT OF ADDITION IS {{ n1_n2_add }}</H4>
+
+
+<h3> User Authetication</h3>
+<div>
+    <label for=""> 
+        Username
+     </label>
+    <input type="text"
+     name="uname" #un>
+</div>
+<div>
+    <label for=""> 
+        password
+     </label>
+    <input type="text"
+     name="uname" #pwd>
+</div>
+
+<button (click)="onLog(un,pwd)"> 
+    LOGIN
+</button>
+<H4>{{msg}}</H4>
+<h3> Two Way Data Binding example</h3>
+<label> Enter course name</label>
+<input type="text" [(ngModel)]="coursename">
+<h4>{{coursename | titlecase}}</h4>
+
+
+<h3> Two Way Data Binding example</h3>
+<label> Enter Quantity</label>
+<input type="text" [(ngModel)]="qty">
+<label> Enter Amount </label>
+<input type="text" [(ngModel)]="amt">
+<h4>Final Bill is {{ qty*amt | currency:'USD'}}</h4>
+<h3>{{dt | date:"dd-mm-yyyy"}}</h3>
+<br><br><br><br><br>

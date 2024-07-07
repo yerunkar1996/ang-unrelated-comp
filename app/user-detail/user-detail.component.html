@@ -1,0 +1,18 @@
+<p>user-detail works!</p>
+
+
+<div class="user_name" *ngFor = "let user of user_data">
+
+    <h2 *ngIf="user.id == curr_user_id">
+        <h1> USERID:{{ curr_user_id}}
+        </h1>
+        <ul>
+            <li>User name : {{user.name}}</li>
+            <li>User Email : {{user.email}}</li>
+            <li>User Phone : {{user.phone}}</li>
+            <li>User Website : {{user.website}}</li>
+            <li>User Company : {{user.company.name}}</li>
+            <li>User City : {{user.address.city}}</li>
+        </ul>
+    </h2>
+</div>

@@ -1,0 +1,18 @@
+<p>empdetails works!</p>
+<h2>Employee Id is {{curr_id}}</h2>
+
+
+<h2 >
+    {{curr_emp.ename}}
+</h2>
+<hr><hr><hr>
+
+<div *ngFor="let e of emp_db">
+    <ul *ngIf="e.eid == curr_id" >
+        <li >{{e.ename}}</li>
+        <li >{{e.eid}}</li>
+        <li >{{e.email}}</li>
+        <li >{{e.contact}}</li>
+        <li >{{e.dept}}</li>
+    </ul>
+</div>

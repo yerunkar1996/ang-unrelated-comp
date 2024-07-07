@@ -1,0 +1,82 @@
+componrnt creation
+comp-name.component.ts
+comp-name.component.css
+comp-name.component.html
+register the component -- app.module.ts
+to view the component -- selector name as tag in
+-- app.component.html
+
+---- Data Binding -----
+1) One way Databinding
+ - ts -> html ------ {{ var_name }} -- interpolation
+ - html -ts --- 
+2) Two way Data
+[(ngModel)] = "var_name"
+--note: import FormsModule in app.module.ts
+----  Event Binding ------
+
+
+----- property Binding ---------
+
+
+----- Component Routing -------
+1) app.component.html
+    <a routerLink=" / "> Comp_name  </a>
+    <router-outlet> .. </router-outlet>
+or
+create header component and add 
+<app-header> </app-header>
+
+2) app.routing.module.ts
+routes=[ {path:"", component:--- }, ]
+
+Notes:
+path:"" -- default route
+path:"**" -- if wrong path is given then this route gets active
+
+3) structural directives
+4) Component communication th service
+ng g s serv_name
+function to save data in an array
+function to give away the data to any component
+
+import serv in the required component
+local instance in constructor private name: serv_name
+ts_fun call serv_fun
+
+5) Activating routing
+part 1 take off
+    ng g c landing comp
+    app-routing.ts -- landing component dynamic route "___________/:___"
+    ts of takeoff comp--
+        router 
+        local instance
+        func(id:any){ this.route.navigate(["_____",id])}
+    html
+        call thr route fun with ng for
+
+
+
+part 2
+activated router
+service file
+
+call acr in ngOnINit(){
+    ________.params.subscribe( arrow func)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

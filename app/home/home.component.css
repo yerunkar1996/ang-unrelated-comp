@@ -1,0 +1,31 @@
+.myRow
+{
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+   
+}
+.s
+{
+    background-color: aquamarine;
+    box-shadow: 5px 5px  10px grey;
+    height: 300px;
+    margin:2px;
+}
+.m
+{
+    background-color: rgb(8, 107, 74);
+    box-shadow: 5px 5px  10px grey;
+    height: 300px;
+    margin:2px
+}
+.bgBlock
+{
+    height:300px;
+    width:100%;
+    background-image: url("/pss/src/assets/images/img1.jpg");
+}
+img
+{
+    border-radius: 50%;
+}

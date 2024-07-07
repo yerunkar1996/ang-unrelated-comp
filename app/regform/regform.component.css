@@ -1,0 +1,20 @@
+.Error
+{
+    color: maroon;
+    font-size: small;
+    font-style: italic;
+}
+
+form
+{
+    padding-left: 30px;
+}
+
+.err
+{
+    border-left: 5px solid red
+}
+.noerr
+{
+    border-left: 5px solid green
+}
